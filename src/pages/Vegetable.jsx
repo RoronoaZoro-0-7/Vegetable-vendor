@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { MdOutlineBloodtype } from 'react-icons/md';
 import { HiOutlineLogout } from 'react-icons/hi';
-import { FaUserAlt } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
+import {FaCarrot} from 'react-icons/fa'
 import tomato from './tomato.jpg';
 import potato from './potato.jpg';
 import onion from './onion.jpg';
@@ -16,13 +15,13 @@ const Header = () => {
     }
     return (
         <nav className="bg-white shadow-md p-2 flex justify-between items-center">
-            <div className="text-xl font-bold text-red-600 flex items-center gap-1">
-                <MdOutlineBloodtype /> RED <span className="text-yellow-500">GOLD</span>
+            <div className="text-xl font-bold text-green-600 flex items-center gap-1">
+                <FaCarrot /> VEGGIE <span className="text-yellow-500">TRACK</span>
             </div>
             <div className="flex items-center gap-6">
                 <p className="text-blue-500 text-1xl">Vegetables</p>
                 <button
-                    className="bg-red-600 text-white px-3 py-1 rounded flex items-center gap-1"
+                    className="bg-green-600 text-white px-3 py-1 rounded flex items-center gap-1"
                     onClick={handleLogout}
                 >
                     <HiOutlineLogout /> Logout
@@ -34,16 +33,36 @@ const Header = () => {
 
 const Sidebar = () => {
     return (
-        <aside className="w-64 bg-red-800 text-white min-h-screen p-4">
+        <aside className="w-64 bg-green-800 text-white min-h-screen p-4">
             <div className="space-y-4 mt-10">
-                <Link to="/admin" className="block px-4 py-2 text-white font-medium no-underline">HomePage</Link>
-                <Link to="/vendor" className="block px-4 py-2 text-white font-medium no-underline">Vendors</Link>
-                <Link to="/vegetables" className="block px-4 py-2 bg-white text-red-700 font-semibold no-underline">Vegetables</Link>
-                <Link to="/history" className="block px-4 py-2 text-white font-medium no-underline">History</Link>
+                <Link
+                    to="/admin"
+                    className="block px-4 py-2 rounded text-white font-medium no-underline hover:no-underline"
+                    style={{ textDecoration: 'none' }}>
+                    HomePage
+                </Link>
+                <Link
+                    to="/vendor"
+                    className="block px-4 py-2 rounded text-white font-medium no-underline hover:no-underline"
+                    style={{ textDecoration: 'none' }}>
+                    Vendors
+                </Link>
+                <Link
+                    to="/vegetables"
+                    className="block px-4 py-2 rounded bg-white text-green-700 font-semibold no-underline hover:no-underline"
+                    style={{ textDecoration: 'none' }}>
+                    Vegetables
+                </Link>
+                <Link
+                    to="/history"
+                    className="block px-4 py-2 rounded text-white font-medium no-underline hover:no-underline"
+                    style={{ textDecoration: 'none' }}>
+                    History
+                </Link>
             </div>
         </aside>
     );
-};
+}
 
 const Vegetable = () => {
     const [vegetables, setVegetables] = useState([
@@ -156,7 +175,7 @@ const Vegetable = () => {
 
                     <button
                         onClick={() => setShowModal(true)}
-                        className="fixed bottom-6 right-6 bg-red-700 hover:bg-red-800 text-white px-5 py-2 rounded-full text-lg shadow-md"
+                        className="fixed bottom-6 right-6 bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-full text-lg shadow-md"
                     >
                         + Add
                     </button>
@@ -207,7 +226,7 @@ const Vegetable = () => {
                                 </button>
                                 <button
                                     onClick={handleAddVegetable}
-                                    className="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800"
+                                    className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800"
                                 >
                                     Add
                                 </button>

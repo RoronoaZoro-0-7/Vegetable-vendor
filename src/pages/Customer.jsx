@@ -1,7 +1,7 @@
 import React from 'react';
-import { MdOutlineBloodtype } from 'react-icons/md';
 import { HiOutlineLogout } from 'react-icons/hi';
-import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom
+import { FaCarrot } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
 
 // Header Component
 const Header = () => {
@@ -11,13 +11,13 @@ const Header = () => {
   }
   return (
     <nav className="bg-white shadow-md p-2 flex justify-between items-center">
-      <div className="text-xl font-bold text-red-600 flex items-center gap-1">
-        <MdOutlineBloodtype /> RED <span className="text-yellow-500">GOLD</span>
+      <div className="text-xl font-bold text-green-700 flex items-center gap-1">
+        <FaCarrot /> VEGGIE <span className="text-yellow-500">ZONE</span>
       </div>
       <div className="flex items-center gap-6">
-        <p className="text-blue-500 text-1xl">Customer </p>
+        <p className="text-blue-500 text-1xl">Customer and Vendor</p>
         <button
-          className="bg-red-600 text-white px-3 py-1 rounded flex items-center gap-1"
+          className="bg-green-700 text-white px-3 py-1 rounded flex items-center gap-1"
           onClick={handleLogout}
         >
           <HiOutlineLogout /> Logout
@@ -30,11 +30,11 @@ const Header = () => {
 // Sidebar Component with Links
 const Sidebar = () => {
   return (
-    <aside className="w-64 bg-red-800 text-white min-h-screen p-4">
+    <aside className="w-64 bg-green-900 text-white min-h-screen p-4">
       <div className="space-y-4 mt-10">
         <Link
           to="/customer"
-          className="block px-4 py-2 rounded bg-white text-red-700 font-semibold no-underline hover:no-underline"
+          className="block px-4 py-2 rounded bg-white text-green-700 font-semibold no-underline hover:no-underline"
           style={{ textDecoration: 'none' }}
         >
           HomePage
@@ -70,21 +70,14 @@ const CustomerHome = () => {
     <Layout>
       <div className="p-6">
         <h1 className="text-3xl font-bold">
-          Welcome <span className="text-green-600">Customer</span>
+          Welcome <span className="text-green-700">Customer and Vendor</span>
         </h1>
-        <h3 className="mt-6 text-xl font-semibold">Manage Blood Bank App</h3>
+        <h3 className="mt-6 text-xl font-semibold">Manage Vegetable Vendor App</h3>
         <hr className="my-4 border-gray-400" />
         <p className="text-gray-700">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo animi blanditiis
-          incidunt dicta quia, quibusdam facere corporis! Dolores, reprehenderit cum sed
-          repellat laudantium architecto natus est nostrum accusamus, odio aspernatur minima
-          fugiat quam molestiae nisi. Temporibus impedit dolorem quia. Distinctio modi non
-          excepturi illo odio voluptatum quae nostrum a temporibus sequi! Explicabo, quasi
-          consequatur ad qui quos labore distinctio voluptates alias nostrum ab dicta
-          aspernatur molestias adipisci quibusdam error ipsa. Totam, tenetur dolores eaque
-          tempora officiis deserunt assumenda? Rerum nemo est nihil laudantium necessitatibus.
-          Possimus, voluptatem voluptates blanditiis quas aspernatur, quam, quaerat minus
-          maiores ipsam sint perferendis dolor.
+          Welcome to the Vegetable Vendor Management System. Here, you can manage vegetable inventories,
+          track vendor supplies, and streamline the distribution of fresh produce to customers efficiently.
+          Our platform ensures that the right vegetables reach the right place at the right time.
         </p>
       </div>
     </Layout>

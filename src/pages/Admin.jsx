@@ -1,8 +1,7 @@
 import React from 'react';
-import { MdOutlineBloodtype } from 'react-icons/md';
+import { FaCarrot } from 'react-icons/fa';
 import { HiOutlineLogout } from 'react-icons/hi';
-import { FaUserAlt } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link, useNavigate } from 'react-router-dom';
 
 // Header Component
 const Header = () => {
@@ -12,13 +11,13 @@ const Header = () => {
   }
   return (
     <nav className="bg-white shadow-md p-2 flex justify-between items-center">
-      <div className="text-xl font-bold text-red-600 flex items-center gap-1">
-        <MdOutlineBloodtype /> RED <span className="text-yellow-500">GOLD</span>
+      <div className="text-xl font-bold text-green-600 flex items-center gap-1">
+        <FaCarrot /> VEGGIE <span className="text-yellow-500">TRACK</span>
       </div>
       <div className="flex items-center gap-6">
-        <p className="text-blue-500 text-1xl">Admin </p>
+        <p className="text-blue-500 text-1xl">Admin</p>
         <button
-          className="bg-red-600 text-white px-3 py-1 rounded flex items-center gap-1"
+          className="bg-green-600 text-white px-3 py-1 rounded flex items-center gap-1"
           onClick={handleLogout}
         >
           <HiOutlineLogout /> Logout
@@ -31,14 +30,14 @@ const Header = () => {
 // Sidebar Component with Links
 const Sidebar = () => {
   return (
-    <aside className="w-64 bg-red-800 text-white min-h-screen p-4">
+    <aside className="w-64 bg-green-800 text-white min-h-screen p-4">
       <div className="space-y-4 mt-10">
         <Link
           to="/admin"
-          className="block px-4 py-2 rounded bg-white text-red-700 font-semibold no-underline hover:no-underline"
+          className="block px-4 py-2 rounded bg-white text-green-700 font-semibold no-underline hover:no-underline"
           style={{ textDecoration: 'none' }}
         >
-          HomePage
+          Dashboard
         </Link>
         <Link
           to="/vendor"
@@ -59,7 +58,7 @@ const Sidebar = () => {
           className="block px-4 py-2 rounded text-white font-medium no-underline hover:no-underline"
           style={{ textDecoration: 'none' }}
         >
-          History
+          Purchase History
         </Link>
       </div>
     </aside>
@@ -87,19 +86,13 @@ const AdminHome = () => {
         <h1 className="text-3xl font-bold">
           Welcome <span className="text-green-600">Admin</span>
         </h1>
-        <h3 className="mt-6 text-xl font-semibold">Manage Blood Bank App</h3>
+        <h3 className="mt-6 text-xl font-semibold">Manage Vegetable Vendor System</h3>
         <hr className="my-4 border-gray-400" />
         <p className="text-gray-700">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo animi blanditiis
-          incidunt dicta quia, quibusdam facere corporis! Dolores, reprehenderit cum sed
-          repellat laudantium architecto natus est nostrum accusamus, odio aspernatur minima
-          fugiat quam molestiae nisi. Temporibus impedit dolorem quia. Distinctio modi non
-          excepturi illo odio voluptatum quae nostrum a temporibus sequi! Explicabo, quasi
-          consequatur ad qui quos labore distinctio voluptates alias nostrum ab dicta
-          aspernatur molestias adipisci quibusdam error ipsa. Totam, tenetur dolores eaque
-          tempora officiis deserunt assumenda? Rerum nemo est nihil laudantium necessitatibus.
-          Possimus, voluptatem voluptates blanditiis quas aspernatur, quam, quaerat minus
-          maiores ipsam sint perferendis dolor.
+          Welcome to the Vegetable Vendor Management Dashboard. Here, you can manage vendors, track
+          vegetable supplies, and monitor the entire distribution flow efficiently. 
+          This platform ensures transparency, quick access to vendor information, and 
+          a well-organized vegetable supply chain.
         </p>
       </div>
     </Layout>

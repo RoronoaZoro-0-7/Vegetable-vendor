@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { MdOutlineBloodtype } from 'react-icons/md';
 import { HiOutlineLogout } from 'react-icons/hi';
-import { FaUserAlt } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
+import { FaCarrot } from 'react-icons/fa';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -12,13 +11,13 @@ const Header = () => {
 
     return (
         <nav className="bg-white shadow-md p-2 flex justify-between items-center">
-            <div className="text-xl font-bold text-red-600 flex items-center gap-1">
-                <MdOutlineBloodtype /> RED <span className="text-yellow-500">GOLD</span>
+            <div className="text-xl font-bold text-green-600 flex items-center gap-1">
+                <FaCarrot /> VEGGIE <span className="text-yellow-500">TRACK</span>
             </div>
             <div className="flex items-center gap-6">
                 <p className="text-blue-500 text-1xl">Vendors </p>
                 <button
-                    className="bg-red-600 text-white px-3 py-1 rounded flex items-center gap-1"
+                    className="bg-green-600 text-white px-3 py-1 rounded flex items-center gap-1"
                     onClick={handleLogout}
                 >
                     <HiOutlineLogout /> Logout
@@ -30,7 +29,7 @@ const Header = () => {
 
 const Sidebar = () => {
     return (
-        <aside className="w-64 bg-red-800 text-white min-h-screen p-4">
+        <aside className="w-64 bg-green-800 text-white min-h-screen p-4">
             <div className="space-y-4 mt-10">
                 <Link
                     to="/admin"
@@ -40,7 +39,7 @@ const Sidebar = () => {
                 </Link>
                 <Link
                     to="/vendor"
-                    className="block px-4 py-2 rounded bg-white text-red-700 font-semibold no-underline hover:no-underline"
+                    className="block px-4 py-2 rounded bg-white text-green-700 font-semibold no-underline hover:no-underline"
                     style={{ textDecoration: 'none' }}>
                     Vendors
                 </Link>
@@ -136,7 +135,7 @@ const Vendor = () => {
                     <h2 className="text-2xl font-bold mb-4">Vendor Details</h2>
                     <div className="overflow-x-auto">
                         <table className="min-w-full bg-white rounded shadow">
-                            <thead className="bg-red-700 text-white">
+                            <thead className="bg-green-700 text-white">
                                 <tr>
                                     <th className="py-2 px-4 text-left">Name</th>
                                     <th className="py-2 px-4 text-left">Town</th>
@@ -163,7 +162,7 @@ const Vendor = () => {
                                                 <button onClick={() => handleEdit(index)} className="bg-yellow-500 text-white px-2 py-1 rounded">
                                                     Edit
                                                 </button>
-                                                <button onClick={() => handleDelete(index)} className="bg-red-600 text-white px-2 py-1 rounded">
+                                                <button onClick={() => handleDelete(index)} className="bg-green-600 text-white px-2 py-1 rounded">
                                                     Delete
                                                 </button>
                                             </div>
@@ -180,7 +179,7 @@ const Vendor = () => {
                             setFormData({ name: '', town: '', email: '', phone: '', vegetables: '' });
                             setShowModal(true);
                         }}
-                        className="fixed bottom-6 right-6 bg-red-700 hover:bg-red-800 text-white px-5 py-2 rounded-full text-lg shadow-md"
+                        className="fixed bottom-6 right-6 bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-full text-lg shadow-md"
                     >
                         + Add
                     </button>
@@ -243,7 +242,7 @@ const Vendor = () => {
                                 </button>
                                 <button
                                     onClick={handleAddVendor}
-                                    className="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800"
+                                    className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800"
                                 >
                                     {editIndex !== null ? 'Update' : 'Add'}
                                 </button>
