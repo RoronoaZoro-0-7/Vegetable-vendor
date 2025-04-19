@@ -1,0 +1,28 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+.register-wrapper {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.register-left,
+.register-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.register-left {
+  background-color: #f8f9fa;
+}
+
+.register-right img {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+}
